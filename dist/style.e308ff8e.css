@@ -356,6 +356,13 @@ input[type='radio'] {
   color: wheat;
 }
 
+.p1--left__btn,
+.p1--right__btn,
+.p2--left__btn,
+.p2--right__btn {
+  opacity: 0.6;
+}
+
 /* ===================== */
 /* Query */
 /* ===================== */

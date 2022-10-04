@@ -1,4 +1,4 @@
-27644
+27649
 85D:\Personal\WebNetifly\PONG-1972\node_modules\string_decoder\node_modules\safe-buffer133093602213849885 1
 93D:\Personal\WebNetifly\PONG-1972\node_modules\simple-swizzle\node_modules\is-arrayish\LICENSE133093602212231440 0
 59D:\Personal\WebNetifly\PONG-1972\node_modules\is-regex\test133093602215310749 1
@@ -49,7 +49,7 @@
 119D:\Personal\WebNetifly\PONG-1972\node_modules\postcss-normalize-string\node_modules\postcss-value-parser\lib\index.d.ts133093602216545124 0
 55D:\Personal\WebNetifly\PONG-1972\node_modules\sshpk\bin133093602213732348 1
 93D:\Personal\WebNetifly\PONG-1972\node_modules\core-js\library\modules\es7.string.trim-left.js133093602227765795 0
-37D:\Personal\WebNetifly\PONG-1972\dist133093602587776678 1
+37D:\Personal\WebNetifly\PONG-1972\dist133093602702679743 1
 109D:\Personal\WebNetifly\PONG-1972\node_modules\regenerate-unicode-properties\Binary_Property\Emoji_Modifier.js133093602223990379 0
 76D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\core\lib\AssetGraph.js133093602219665733 0
 117D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\reporter-cli\node_modules\@parcel\utils\test\collection.test.js133093602217118479 0
@@ -4839,6 +4839,7 @@
 72D:\Personal\WebNetifly\PONG-1972\node_modules\shebang-regex\package.json133093602210184191 0
 68D:\Personal\WebNetifly\PONG-1972\node_modules\domhandler\lib\node.js133093602215752324 0
 74D:\Personal\WebNetifly\PONG-1972\node_modules\core-js\library\es5\index.js133093602228434667 0
+60D:\Personal\WebNetifly\PONG-1972\dist\index.c92073ef.css.map133093602702284355 0
 60D:\Personal\WebNetifly\PONG-1972\node_modules\lodash\head.js133093602226578241 0
 94D:\Personal\WebNetifly\PONG-1972\node_modules\postcss-svgo\node_modules\css-tree\lib\convertor133093602222713296 1
 63D:\Personal\WebNetifly\PONG-1972\node_modules\type-fest\license133093602210125880 0
@@ -24080,6 +24081,7 @@
 90D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\optimizer-image\node_modules\@parcel133093602189691360 1
 111D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\packager-svg\node_modules\@parcel\utils\src\countLines.js133093602217842803 0
 111D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\packager-svg\node_modules\@parcel\utils\src\DefaultMap.js133093602218241418 0
+56D:\Personal\WebNetifly\PONG-1972\dist\index.c92073ef.css133093602702279537 0
 112D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\packager-svg\node_modules\@parcel\utils\src\escape-html.js133093602219246674 0
 121D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\packager-svg\node_modules\@parcel\utils\src\generateBuildMetrics.js133093602219433840 0
 120D:\Personal\WebNetifly\PONG-1972\node_modules\@parcel\packager-svg\node_modules\@parcel\utils\src\generateCertificate.js133093602219607546 0
@@ -27495,9 +27497,12 @@
 59D:\Personal\WebNetifly\PONG-1972\node_modules\.bin\uuid.cmd133093602230182002 0
 56D:\Personal\WebNetifly\PONG-1972\node_modules\.bin\which133093602230182002 0
 60D:\Personal\WebNetifly\PONG-1972\node_modules\.bin\which.cmd133093602230182002 0
+55D:\Personal\WebNetifly\PONG-1972\dist\icon.323200e9.png133093602701955545 0
 55D:\Personal\WebNetifly\PONG-1972\dist\icon.64a17237.png133093602583207480 0
 60D:\Personal\WebNetifly\PONG-1972\dist\index.768c84fc.css.map133093602587776678 0
-48D:\Personal\WebNetifly\PONG-1972\dist\index.html133093602587741900 0
+55D:\Personal\WebNetifly\PONG-1972\dist\index.e82f28a0.js133093602702674363 0
+59D:\Personal\WebNetifly\PONG-1972\dist\index.e82f28a0.js.map133093602702679743 0
+48D:\Personal\WebNetifly\PONG-1972\dist\index.html133093602702674363 0
 42D:\Personal\WebNetifly\PONG-1972\.cache\01133093175181983193 1
 42D:\Personal\WebNetifly\PONG-1972\.cache\05133093175182014443 1
 42D:\Personal\WebNetifly\PONG-1972\.cache\06133093175182019471 1

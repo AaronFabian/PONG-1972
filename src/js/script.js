@@ -456,12 +456,12 @@ class Machine {
     return `<div class="player--1__screen">
               <h4 class="player--1__name">P2</h4>
               <small class="player__nickname">${this.playerTwoName}</small>
-              <span>-${this._score[1]}-</span>
+              <span>-${this._score[0]}-</span>
             </div>
             <div class="player--2__screen">
               <h4 class="player--1__name">P1</h4>
               <small class="player__nickname">${this.playerOneName}</small>
-              <span>-${this._score[0]}-</span>
+              <span>-${this._score[1]}-</span>
             </div>`;
   }
 

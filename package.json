@@ -1,0 +1,16 @@
+{
+  "name": "pong-1972",
+  "version": "1.0.0",
+  "description": "Pong mini project (game dev)",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Aaron Fabian",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^5.1.13",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.17"
+  }
+}

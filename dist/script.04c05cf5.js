@@ -216,9 +216,9 @@ var Ball = /*#__PURE__*/function () {
 
       this.dy = randValY < 0 ? -2 : 2; // Y's velocity
     } else {
-      this.dx = randValX < 0 ? -3 : 3; // X's velocity
+      this.dx = randValX < 0 ? -2.5 : 2.5; // X's velocity
 
-      this.dy = randValY < 0 ? -3 : 3; // Y's velocity
+      this.dy = randValY < 0 ? -2.5 : 2.5; // Y's velocity
     }
 
     this.radius = radius;
@@ -243,6 +243,11 @@ var Ball = /*#__PURE__*/function () {
         isWrite = true;
       };
 
+      var newBall = function newBall() {
+        ball.shift();
+        ball.push(new Ball(100, 100, 10, 'white'));
+      };
+
       if (isSmartPhone) {
         if (this.y + this.radius >= canvas.height || this.y - this.radius <= 0) {
           this.dy = -this.dy;
@@ -252,6 +257,7 @@ var Ball = /*#__PURE__*/function () {
 
             machineObj._renderSmartPhoneUI();
 
+            newBall();
             toggleEngine();
           }
 
@@ -260,6 +266,7 @@ var Ball = /*#__PURE__*/function () {
 
             machineObj._renderSmartPhoneUI();
 
+            newBall();
             toggleEngine();
           }
         } else if (this.x - this.radius <= 0 || this.x + this.radius >= canvas.width) {
@@ -274,6 +281,7 @@ var Ball = /*#__PURE__*/function () {
 
             machineObj._renderScore();
 
+            newBall();
             toggleEngine();
           }
 
@@ -282,6 +290,7 @@ var Ball = /*#__PURE__*/function () {
 
             machineObj._renderScore();
 
+            newBall();
             toggleEngine();
           }
         } else if (this.y - this.radius <= 0 || this.y + this.radius >= canvas.height) {
@@ -661,13 +670,13 @@ var playerTwo;
 var machine = new Machine();
 
 function init() {
-  ball = new Ball(100, 100, 10, 'white');
+  ball.push(new Ball(100, 100, 10, 'white'));
   player = new Player(15, 175, 1, machine.playerOneColor);
   playerTwo = new Player(15, 175, 2, machine.playerTwoColor);
 }
 
 function spInit() {
-  ball = new Ball(100, 100, 10, 'white');
+  ball.push(new Ball(100, 100, 10, 'white'));
   player = new Player(80, 10, 1, machine.playerOneColor);
   playerTwo = new Player(80, 10, 2, machine.playerTwoColor);
 }
@@ -684,26 +693,26 @@ function animate() {
 
   if (runEngine) {
     if (isSmartPhone) {
-      if ((0, _utils.getDistCirRec)(ball, player) || player.height + ball.radius < ball.radius) {
-        ball.dy = -ball.dy;
+      if ((0, _utils.getDistCirRec)(ball[0], player) || player.height + ball[0].radius < ball[0].radius) {
+        ball[0].dy = -ball[0].dy;
       }
 
-      if ((0, _utils.getDistCirRec)(ball, playerTwo) || player.height + ball.radius < ball.radius) {
-        ball.dy = -ball.dy;
+      if ((0, _utils.getDistCirRec)(ball[0], playerTwo) || player.height + ball[0].radius < ball[0].radius) {
+        ball[0].dy = -ball[0].dy;
       }
     } else {
-      if ((0, _utils.getDistCirRec)(ball, player)) {
-        ball.dx = -ball.dx;
+      if ((0, _utils.getDistCirRec)(ball[0], player)) {
+        ball[0].dx = -ball[0].dx;
       }
 
-      if ((0, _utils.getDistCirRec)(ball, playerTwo)) {
-        ball.dx = -ball.dx;
+      if ((0, _utils.getDistCirRec)(ball[0], playerTwo)) {
+        ball[0].dx = -ball[0].dx;
       }
     }
 
     player.update();
     playerTwo.update();
-    ball.update(machine);
+    ball[0].update(machine);
   }
 
   if (frame % 150 === 0 && !runEngine) {
@@ -790,7 +799,7 @@ window.addEventListener('keyup', function (_ref2) {
 //   requestAnimationFrame(animate);
 //   c.clearRect(0, 0, canvas.width, canvas.height);
 //   if (
-//     getDistance(ball.x, ball.y, ball2.x, ball2.y) <=
+//     getDistance(ball[0].x, ball.y, ball2.x, ball2.y) <=
 //     ball.radius + ball2.radius
 //   ) {
 //     if (ball2.color !== 'blue') {
@@ -830,7 +839,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51271" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55237" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

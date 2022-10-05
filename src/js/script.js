@@ -34,8 +34,8 @@ class Ball {
       this.dx = randValX < 0 ? -1.5 : 1.5; // X's velocity
       this.dy = randValY < 0 ? -2 : 2; // Y's velocity
     } else {
-      this.dx = randValX < 0 ? -3 : 3; // X's velocity
-      this.dy = randValY < 0 ? -3 : 3; // Y's velocity
+      this.dx = randValX < 0 ? -2.5 : 2.5; // X's velocity
+      this.dy = randValY < 0 ? -2.5 : 2.5; // Y's velocity
     }
 
     this.radius = radius;
@@ -57,17 +57,24 @@ class Ball {
       isWrite = true;
     };
 
+    const newBall = () => {
+      ball.shift();
+      ball.push(new Ball(100, 100, 10, 'white'));
+    };
+
     if (isSmartPhone) {
       if (this.y + this.radius >= canvas.height || this.y - this.radius <= 0) {
         this.dy = -this.dy;
         if (this.y + this.radius >= canvas.height) {
           machineObj._score[0]++;
           machineObj._renderSmartPhoneUI();
+          newBall();
           toggleEngine();
         }
         if (this.y - this.radius <= 0) {
           machineObj._score[1]++;
           machineObj._renderSmartPhoneUI();
+          newBall();
           toggleEngine();
         }
       } else if (
@@ -82,11 +89,13 @@ class Ball {
         if (this.x + this.radius >= canvas.width) {
           machineObj._score[0]++;
           machineObj._renderScore();
+          newBall();
           toggleEngine();
         }
         if (this.x - this.radius <= 0) {
           machineObj._score[1]++;
           machineObj._renderScore();
+          newBall();
           toggleEngine();
         }
       } else if (
@@ -510,13 +519,13 @@ let playerTwo;
 let machine = new Machine();
 
 function init() {
-  ball = new Ball(100, 100, 10, 'white');
+  ball.push(new Ball(100, 100, 10, 'white'));
   player = new Player(15, 175, 1, machine.playerOneColor);
   playerTwo = new Player(15, 175, 2, machine.playerTwoColor);
 }
 
 function spInit() {
-  ball = new Ball(100, 100, 10, 'white');
+  ball.push(new Ball(100, 100, 10, 'white'));
   player = new Player(80, 10, 1, machine.playerOneColor);
   playerTwo = new Player(80, 10, 2, machine.playerTwoColor);
 }
@@ -534,30 +543,30 @@ function animate() {
   if (runEngine) {
     if (isSmartPhone) {
       if (
-        getDistCirRec(ball, player) ||
-        player.height + ball.radius < ball.radius
+        getDistCirRec(ball[0], player) ||
+        player.height + ball[0].radius < ball[0].radius
       ) {
-        ball.dy = -ball.dy;
+        ball[0].dy = -ball[0].dy;
       }
 
       if (
-        getDistCirRec(ball, playerTwo) ||
-        player.height + ball.radius < ball.radius
+        getDistCirRec(ball[0], playerTwo) ||
+        player.height + ball[0].radius < ball[0].radius
       ) {
-        ball.dy = -ball.dy;
+        ball[0].dy = -ball[0].dy;
       }
     } else {
-      if (getDistCirRec(ball, player)) {
-        ball.dx = -ball.dx;
+      if (getDistCirRec(ball[0], player)) {
+        ball[0].dx = -ball[0].dx;
       }
 
-      if (getDistCirRec(ball, playerTwo)) {
-        ball.dx = -ball.dx;
+      if (getDistCirRec(ball[0], playerTwo)) {
+        ball[0].dx = -ball[0].dx;
       }
     }
     player.update();
     playerTwo.update();
-    ball.update(machine);
+    ball[0].update(machine);
   }
 
   if (frame % 150 === 0 && !runEngine) {
@@ -638,7 +647,7 @@ window.addEventListener('keyup', ({ key }) => {
 //   c.clearRect(0, 0, canvas.width, canvas.height);
 
 //   if (
-//     getDistance(ball.x, ball.y, ball2.x, ball2.y) <=
+//     getDistance(ball[0].x, ball.y, ball2.x, ball2.y) <=
 //     ball.radius + ball2.radius
 //   ) {
 //     if (ball2.color !== 'blue') {

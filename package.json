@@ -9,9 +9,7 @@
   "author": "Aaron Fabian",
   "license": "ISC",
   "devDependencies": {
-    "cssnano": "^5.1.13",
-    "parcel-bundler": "^1.12.5",
-    "postcss": "^8.4.17"
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "parcel": "^2.7.0"

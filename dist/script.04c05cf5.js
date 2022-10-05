@@ -216,7 +216,7 @@ var Ball = /*#__PURE__*/function () {
 
       this.dy = randValY < 0 ? -2 : 2; // Y's velocity
     } else {
-      this.dx = randValX < 0 ? -2.5 : 2.5; // X's velocity
+      this.dx = randValX < 0 ? -3 : 3; // X's velocity
 
       this.dy = randValY < 0 ? -2.5 : 2.5; // Y's velocity
     }
@@ -244,7 +244,7 @@ var Ball = /*#__PURE__*/function () {
       };
 
       var newBall = function newBall() {
-        ball.shift();
+        ball.pop();
         ball.push(new Ball(100, 100, 10, 'white'));
       };
 
@@ -456,12 +456,12 @@ var Machine = /*#__PURE__*/function () {
 
     _classPrivateFieldInitSpec(this, _playerOneDefColor, {
       writable: true,
-      value: 'blue'
+      value: '#00b0f0'
     });
 
     _classPrivateFieldInitSpec(this, _playerTwoDefColor, {
       writable: true,
-      value: 'red'
+      value: '#c00000'
     });
 
     _classPrivateFieldInitSpec(this, _playerOneDefName, {
@@ -811,7 +811,7 @@ window.addEventListener('keyup', function (_ref2) {
 //   ball2.draw();
 //   ball.update();
 // }
-},{"./utils":"src/js/utils.js"}],"C:/Users/AARON FABIAN/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./utils":"src/js/utils.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -839,7 +839,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55237" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53527" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -1015,5 +1015,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/AARON FABIAN/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/script.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/script.js"], null)
 //# sourceMappingURL=/script.04c05cf5.js.map

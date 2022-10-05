@@ -34,7 +34,7 @@ class Ball {
       this.dx = randValX < 0 ? -1.5 : 1.5; // X's velocity
       this.dy = randValY < 0 ? -2 : 2; // Y's velocity
     } else {
-      this.dx = randValX < 0 ? -2.5 : 2.5; // X's velocity
+      this.dx = randValX < 0 ? -3 : 3; // X's velocity
       this.dy = randValY < 0 ? -2.5 : 2.5; // Y's velocity
     }
 
@@ -58,7 +58,7 @@ class Ball {
     };
 
     const newBall = () => {
-      ball.shift();
+      ball.pop();
       ball.push(new Ball(100, 100, 10, 'white'));
     };
 
@@ -222,8 +222,8 @@ class Machine {
   #playerOne = playerOneEl;
   #playerTwo = playerTwoEl;
 
-  #playerOneDefColor = 'blue';
-  #playerTwoDefColor = 'red';
+  #playerOneDefColor = '#00b0f0';
+  #playerTwoDefColor = '#c00000';
 
   #playerOneDefName = '-';
   #playerTwoDefName = '-';
